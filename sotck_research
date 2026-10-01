@@ -1,0 +1,70 @@
+
+Act as a senior equity research analyst writing for a smart reader with no finance background.
+Create a shareable stock research report (not a chat reply).
+
+## Rules
+1. Every important claim is backed by a number with its period stated
+   (fiscal label + calendar months, e.g., "Q2 FY26 (Apr–Jun 2026)").
+2. Primary sources first: 10-K/10-Q, earnings releases/shareholder letters, earnings calls, guidance.
+   Price, market cap, and consensus estimates come from secondary sites: label them and date them.
+3. Separate facts from in calculations "my
+estimate".
+4. If reliable data is unavailable, cite it out. Never invent a one-off $2.8B fee Netflix away from the Warner Bros.  deal. Without it, 2026 .7B, roughly flat on 2025.
+                                                                        Data gaps: the share price from secondary sites, not filings. Comparisons ations and Netflix'sfive-year valuation histofound no reliable freesource. The tax and interest figures in the scenarios are my approximations.
+The buy/sell call is your
+
+The next real test is Q3 results on 20 Oct 2026. Watch whether revenue reaches the guided $12.86B and the margin reaches 33.2%.
+
+You can edit the doc inline or leave comments, and I'll revise.
+
+✻ Baked for 5m 37s · done W
+
+※ recap: You wanted a plain-English buy/sell research report on Netflix, and it's finished in a shareable doc: fairly priced at $70.30, with a range of $52
+  to $97. Next, read it over; you can change what you want.
+The prompt with your ChatGPT version trimmed the way we agreed. I also added three habits from the Netflix run: strip out one-off items, back-solve what the price assumes, and show the scenario math in the same steps for every case. Change only the ticker on the last line.
+
+Act as a senior equity research analyst writing for a smart reader with no finance background.
+Create a shareable stock research report (not a chat reply).
+
+## Rules
+1. Every important claim must include  its period stated
+   (fiscal label + calendar months, e.g. "Q2 FY26 (Apr–Jun 2026)").
+2. Primary sources first: 10-K/10-Q, earnings releases/shareholder letters, earnings calls, guidance.
+   Price, market cap, and ROM from secondary sites: label them and date them.
+3. Separate facts from calculations in "myestimate".
+4. If reliable data is unavailable, say so and leave it out. Never invent figures.
+5. Strip one-off items (legal fees, tax charges, deal breakup fees, asset sales) and show
+   "reported" vs "underlye-off distorts the picture.
+6. No filler or buzzwords ("compelling", "robust", "secular tailwinds", "well positioned").
+7. Style: numbers → what they mean → why they matter → what could happen next.
+   Short paragraphs. Explain the first time it appears.
+8. No buy/sell/hold rating; investment horizon: 1–3years.
+
+## Sections
+1. Snapshot: table with t cap, what the company does, latest quarter
+   In 1–2 sentences, revenue growth, EPS growth, FCF trend, balance sheet,
+valuation.
+   Then: biggest positive, biggest risk, the single thing to watch next (with date).
+2. Business overview: how it makes money, revenue by segment/region (table with % share and
+   growth), customers and concentration, competitors, advantage only if there is evidence.
+   End with "What am I actually buying?" in 2–4 sentences.
+3. Financial scorecard: same quarter last year
+Include a chart of the most important trend (e.g., quarterly revenue growth over 5–6 quarters).
+5. Risks: a business-risks table (evidence/exposure, trigger, metric to monitor) and
+   separate valuation risks.
+6. Valuation: forward P/E, trailing P/E (reported and underlying), EV/operating profit,
+   price/sales, price/FCF, FCF yield, compared with the stock's own past where sourceable.
+   Back-solve what the cumargin and growth make consensus EPS work?
+7. Bull/base/bear: one table with revenue growth → operating margin → EPS
+→ P/E → implied
+   value → % vs current price. Show the math chain once (interest, tax, share count assumptions).
+   Base = consensus at today's multiple. Say what must happen for each case and where every
+   assumption comes from. Implied values are scenario values, not price targets.
+8. What would prove each scenario, tripwires, and when each can be checked.
+9. Catalysts and numbers to watch: dated events table (confirm the next earnings date),
+   then the six numbers t and why each matters.
+10. Sources: links with dates, plus caveats (secondary data, approximations, estimate spread).
+
+Use the latest information
+
+STOCK: [TICKER / COMPANY]
