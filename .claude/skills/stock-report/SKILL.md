@@ -25,6 +25,7 @@ The files in this skill's folder:
 - `researcher.md`: the research agent's brief and the ledger format.
 - `debater.md`: the bull/bear debaters' brief (case, then rebuttal).
 - `reviewer.md`: the reviewer's checks and output format.
+- `yahoo.py`: the researcher's script that pulls consensus, revisions, surprises and peer multiples from Yahoo Finance (via `yfinance`).
 
 Pass subagents the **absolute paths** to these files.
 

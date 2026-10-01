@@ -7,7 +7,7 @@ list of prompts
 | --- | --- |
 | [`stock-report`](.claude/skills/stock-report/SKILL.md) | Evidence-based stock research report: business, financials, valuation, what the price assumes, bull/base/bear scenarios and tripwires. A researcher subagent builds a sourced **facts ledger**, bull and bear subagents debate it (case + rebuttal), the main session writes only from the ledger, and a fresh reviewer subagent checks every number, calculation and claim. Run `/stock-report NFLX`. |
 
-`.claude/skills/stock-report/` files: `SKILL.md` (the flow) · `report-spec.md` (report content and style) · `researcher.md` (research brief + ledger format) · `debater.md` (bull/bear debate brief) · `reviewer.md` (review checklist).
+`.claude/skills/stock-report/` files: `SKILL.md` (the flow) · `report-spec.md` (report content and style) · `researcher.md` (research brief + ledger format) · `debater.md` (bull/bear debate brief) · `reviewer.md` (review checklist) · `yahoo.py` (Yahoo Finance consensus, revisions, surprises, peers via `yfinance`; needs `pip install yfinance`, personal use only).
 
 ### Run it remotely (phone or web)
 
@@ -18,7 +18,7 @@ Open a session on `harminder0209/prompts`, type `/stock-report NFLX`, and the re
 
 ```sh
 mkdir -p ~/.claude/skills/stock-report
-for f in SKILL.md report-spec.md researcher.md debater.md reviewer.md; do
+for f in SKILL.md report-spec.md researcher.md debater.md reviewer.md yahoo.py; do
   curl -fsSL "https://raw.githubusercontent.com/harminder0209/prompts/main/.claude/skills/stock-report/$f" \
     -o ~/.claude/skills/stock-report/$f
 done
