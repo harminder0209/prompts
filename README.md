@@ -15,4 +15,4 @@ curl -fsSL https://raw.githubusercontent.com/harminder0209/prompts/main/skills/s
   -o ~/.claude/skills/stock-report/SKILL.md
 ```
 
-The prompt body (everything after the `---` divider in `SKILL.md`) also works pasted into any chat model; put the ticker on the last line as `STOCK: <TICKER>`.
+Paste-ready prompt for any chat model: [`sotck_research`](sotck_research). Change only the last line (`STOCK: <TICKER>`).
