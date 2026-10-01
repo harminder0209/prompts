@@ -36,10 +36,15 @@ Pass subagents the **absolute paths** to these files.
 
 ## Step 1: Make the doc and start the researcher, in parallel
 
-- **Doc:** create a shareable doc with the Claude Docs connector if available, otherwise an HTML or Markdown file in the working folder.
-  - Title: `<Company> (<TICKER>) — Stock Research Report`.
-  - Add an as-of date and one placeholder per section from `report-spec.md`.
-  - Open the doc for the user.
+- **Report = a published Artifact, always.** The user reads it on mobile and may run this skill from a remote session, so the report must end up at a claude.ai artifact link, never only in a local file or in chat. Use the first route that is available:
+  1. **Claude Docs connector** (first-party docs tools): create the doc with the title, an as-of date and one pending placeholder per section from `report-spec.md`, then open it. The doc is itself an artifact, and its link works on mobile.
+  2. **Artifact tool** (no docs connector):
+     - Load the `artifact-design` skill first.
+     - Write `<working folder>/<TICKER>-report.html` as a mobile-first page: a single column, tables that scroll inside their own box rather than the page, readable at phone width, with light and dark themes.
+     - Publish it right away with just the title and section headings, so the link exists early. Use `icon: "chart"` and a one-line description, e.g. `"<Company> stock research, as of <date>"`.
+     - Republish the same file path after each section is filled. The URL stays the same.
+  3. **Neither available:** write the HTML file and say plainly that it could not be published. Never claim a link you don't have.
+  - Title for all routes: `<Company> (<TICKER>) — Stock Research Report`.
 - **Researcher:** start a subagent in the background (Agent tool, `general-purpose`, model `sonnet` unless the user said otherwise) with:
   > Read `<abs path>/researcher.md` and follow it. Ticker: `<TICKER>`. Today: `<date>`. Write the ledger to `<ledger path>`. Previous report: `<link or none>`. Spec: `<abs path>/report-spec.md`.
 
@@ -85,14 +90,19 @@ Finish the remaining sections one at a time, in the order of `report-spec.md` (s
 Start a new subagent, not the researcher or a debater, so it brings fresh eyes (`general-purpose`, model `sonnet`):
 > Read `<abs path>/reviewer.md` and follow it. Report: `<doc link or file path>`. Ledger: `<ledger path>`. Debate: `<bull path>`, `<bear path>`. Spec: `<abs path>/report-spec.md`.
 
-Docs links can only be read with docs tools. If the subagent can't read the doc, export or copy the report text to `<working folder>/<TICKER>-report.md` and give it that path.
+Subagents can't read a docs or artifact link. Give the reviewer a local copy instead:
+- **Artifact route:** the HTML file itself.
+- **Docs route:** export or copy the report text to `<working folder>/<TICKER>-report.md`.
 
 ## Step 5: Fix, then hand over
 
 - Apply every confirmed fix from the reviewer. Where you disagree with one, check it against the ledger or source. The evidence decides, not you.
 - If any **WRONG**, **UNSOURCED** or **UNSUPPORTED** items were fixed, run the reviewer once more on the changed sections only. Stop after two review rounds and list anything still open in the data-limitations section.
+- Make sure the final version is published:
+  - **Docs route:** the doc is live already.
+  - **Artifact route:** republish the HTML after the fixes.
 - Reply in chat with:
-  - the doc link;
+  - the artifact link, first and on its own line, so it is easy to tap on mobile;
   - what the price assumes;
   - the scenario range vs the current price;
   - the biggest positive and biggest risk;
