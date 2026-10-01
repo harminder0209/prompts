@@ -15,4 +15,4 @@ curl -fsSL https://raw.githubusercontent.com/harminder0209/prompts/main/skills/s
   -o ~/.claude/skills/stock-report/SKILL.md
 ```
 
-Paste-ready prompt for any chat model: [`sotck_research`](sotck_research). Change only the last line (`STOCK: <TICKER>`).
+Paste-ready prompt for any chat model: [`stock_research.md`](stock_research.md). Change only the last line (`STOCK: <TICKER>`).
