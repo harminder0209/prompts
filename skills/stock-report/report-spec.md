@@ -117,6 +117,8 @@ Bull and bear: state exactly what has to happen, in numbers, the real business d
 that would cause it, and where each assumption came from (guidance, consensus, history,
 peers, or explicit scenario assumption). Fold the 3–5 measurable growth drivers into the
 bull case rather than a separate section.
+Under the table: the strongest argument on each side that the other side could not
+rebut with evidence, and each side's own weakest point.
 
 ## 12. Scenario tripwires
 | Metric | Bull evidence | Base range | Bear evidence | Next check (date) |
